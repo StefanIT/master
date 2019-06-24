@@ -1,0 +1,49 @@
+<!-- general -->
+<div class="general">
+  <h4 class="latest-text w3_latest_text">Movies</h4>
+  <div class="container">
+    <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+      <ul id="myTab" class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a (click)="filter('id','asc')" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">All movies</a></li>
+        <li role="presentation"><a (click)="filter('views', 'desc')" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Top viewed</a></li>
+        <li role="presentation"><a (click)="filter('rating', 'desc')" id="rating-tab" role="tab" data-toggle="tab" aria-controls="rating" aria-expanded="true">Top Rating</a></li>
+        <li role="presentation"><a (click)="filter('created_at', 'desc')" role="tab" id="imdb-tab" data-toggle="tab" aria-controls="imdb" aria-expanded="false">Recently Added</a></li> 
+      </ul>
+      <div id="myTabContent" class="tab-content">
+        <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+          <div class="w3_agile_featured_movies">
+
+
+              <div class="col-md-2 w3l-movie-gride-agile" *ngFor="let movie of movies">
+                  <a routerLink="/single/{{ movie.id }}" class="hvr-shutter-out-horizontal"><img src="assets/{{ movie.image }}" title="album-name" class="img-responsive" alt=" " />
+                    <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+                  </a>
+                  <div class="mid-1 agileits_w3layouts_mid_1_home">
+                    <div class="w3l-movie-text">
+                      <h6><a href="single.html">{{ movie.title }}</a></h6>							
+                    </div>
+                    <div class="mid-2 agile_mid_2_home">
+                      <p><b>Year:</b> {{ movie.year }} </p>
+                      <p> <b> Views:</b> {{ movie.views }} </p>
+                      <div class="block-stars">
+                        <ul class="w3l-ratings">
+                          <li *ngFor="let star of movie.rating | iterator"><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                          <li><a href="#"><i class="fa fa-star-o" aria-hidden="true" *ngFor="let star of 5-movie.rating | iterator"></i></a></li>
+                          <!-- <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                          <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                          <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+                          <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li> -->
+                        </ul>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <div class="ribben">
+                    <p>NEW</p>
+                  </div>
+                </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //general -->

@@ -1,0 +1,12 @@
+<!-- banner -->
+
+<div id="slidey" style="display:none;">
+    <ul>
+      <li *ngFor="let banner of banners">
+        <img src="assets/{{ banner.image }}" alt="{{ banner.title }}">
+        <p class='title'>{{ banner.title }}</p>
+        <p class='description'> {{ banner.description }}</p>
+      </li>
+    </ul>   	
+</div>
+<!-- //banner -->

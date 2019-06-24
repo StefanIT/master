@@ -1,0 +1,52 @@
+<div class="all-comments">
+    <div class="all-comments-info">
+      <a href="#">Comments</a>
+      <div *ngIf="!authService.isLoggedIn()">
+        <h3>LOGIN TO POST COMMENTS.</h3>
+        <p><b>Username:</b> stefan@gmail.com, </p>
+        <p><b>password:</b> stefan.</p>
+      </div>
+      <div class="agile-info-wthree-box" *ngIf="authService.isLoggedIn()">
+        <form #forma="ngForm" (ngSubmit)="addComment(forma)" name="forma">
+          <input type="text" placeholder="Name" required="" #name="ngModel" required ngModel name="name" pattern="^[A-Z][a-z]{2,}$">
+
+          <div  *ngIf="name.touched && name.invalid" class="alert alert-danger">Name is required and should start with uppercase. Minimum 3 characters.</div>
+          
+
+          <input type="text" name="email" #email="ngModel" id="email" ngModel placeholder="Email" required minlength="4" >
+                
+          <div  *ngIf="email.touched && email.invalid" class="alert alert-danger">Email is required and should be minimum characters.</div>
+
+          <input type="text" placeholder="Subject" #subject="ngModel" required="" ngModel name="subject">
+
+          <div  *ngIf="subject.touched && subject.invalid" class="alert alert-danger">Subject is required.</div>
+
+          <textarea placeholder="Message" ngModel #message="ngModel" ngModel name="message" required></textarea>
+
+          <div  *ngIf="message.touched && message.invalid" class="alert alert-danger">Message is required.</div>
+
+          <input type="submit" value="SEND" [disabled]="!forma.valid">
+          <div class="clearfix"> </div>
+        </form>
+      </div>
+    </div>
+    <div class="media-grids" *ngIf="comments">
+      <div class="media" *ngFor="let comment of comments" [@itemAnim1]>
+        <h5>{{ comment.name }}</h5>
+        <div class="media-left">
+          <a href="#">
+            <img src="assets/images/user.jpg" title="One movies" alt=" " />
+          </a>
+         
+        </div>
+        <div class="media-body">
+          <span>{{ comment.subject }} 
+            <!-- <a (click)="deleteComment(comment)"><i class="fa fa-remove"></i> Remove</a> --> 
+          </span>
+          <p> {{ comment.message }} </p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+    </div>
+  </div>

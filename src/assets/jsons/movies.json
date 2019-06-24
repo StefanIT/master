@@ -1,0 +1,53 @@
+[
+    {
+        "id" : 1,
+        "title": "God’s Compass",
+        "image": "images/m15.jpg",
+        "year": 2016,
+        "rating": 4,
+        "views": 10,
+        "featured": true,
+        "created_at": "2018-06-01"
+    },
+    {
+        "id" : 2,
+        "title": "Bad Moms",
+        "image": "images/m2.jpg",
+        "year": 2016,
+        "rating": 5,
+        "views": 3,
+        "featured": false,
+        "created_at": "2017-06-05"
+    },
+    {
+        "id" : 3,
+        "title": "Jason Bourne",
+        "image": "images/m5.jpg",
+        "year": 2016,
+        "rating": 3,
+        "views": 34,
+        "featured": true,
+        "created_at": "2018-01-01"
+    },
+    {
+        "id" : 4,
+        "title": "Rezort",
+        "image": "images/m16.jpg",
+        "year": 2016,
+        "rating": 3,
+        "views": 34,
+        "featured": true,
+        "created_at": "2018-07-16"
+    },
+    
+    {
+        "id" : 5,
+        "title": "X-Men",
+        "image": "images/m11.jpg",
+        "year": 2016,
+        "rating": 4,
+        "views": 10,
+        "featured": true,
+        "created_at": "2018-07-23"
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "id" : 1,
+        "name": "Danijela",
+        "phone": "011/323233",
+        "comment": "Tekst komentara..",
+        "movieId": "1"
+    }
+]

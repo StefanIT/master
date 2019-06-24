@@ -1,0 +1,20 @@
+<div class="col-md-4 single-right">
+    <h3>Up Next</h3>
+    <div class="single-grid-right">
+      
+      <div class="single-right-grids" *ngFor="let movie of movies">
+          
+        <div class="col-md-4 single-right-grid-left">
+          <a href="#"><img src="assets/{{ movie.image }}" alt="" /></a>
+        </div>
+        <div class="col-md-8 single-right-grid-right">
+          <p class="title"> {{ movie.title }}</p>
+          <p class="author">Created at: {{ movie.created_at }}</p>
+          <p class="author">Comming: {{ movie.year }}</p>
+          <p class="views">Views: {{ movie.views }}</p>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+
+    </div>
+  </div>

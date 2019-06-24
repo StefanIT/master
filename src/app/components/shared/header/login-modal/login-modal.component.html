@@ -1,0 +1,32 @@
+<div [@dialog] *ngIf="visible" class="dialog">
+    <ng-content></ng-content>
+    <section>
+        <div class="modal-body">
+          <div class="w3_login_module">
+            <div class="module form-module">
+              <div class="toggle"><i class="fa fa-times fa-pencil"></i>
+              <div class="tooltip">Click Me</div>
+              </div>
+              <div class="form">
+              <h3>Login to your account</h3>
+              <form name="forma" #forma="ngForm">
+                  
+                <div  *ngIf="invalidLogin" class="alert alert-danger">Incorrect email/password.</div>
+
+                <input type="text" name="email" #email="ngModel" id="email" ngModel placeholder="Username" required>
+                
+                <div  *ngIf="email.touched && email.invalid" class="alert alert-danger">Email is required and should be minimum {{ email.errors.minlength.requiredLength }} characters.</div>
+
+              <input type="password" name="password" #password="ngModel" id="password" ngModel placeholder="Password" required>
+                
+                <input *ngIf="visible" type="submit" value="Login" (click)="loginUser(forma)">
+              </form>
+              </div>
+              <div class="cta"><a href="#">Forgot your password?</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <button *ngIf="closable" (click)="close()" aria-label="Close" class="dialog__close-btn">X</button>
+  </div>
+  <div *ngIf="visible" class="overlay" (click)="close()"></div>

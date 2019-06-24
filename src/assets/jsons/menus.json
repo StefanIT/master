@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "link": "Home",
+        "routeLink" : "/"
+    },
+    {
+        "id": 2,
+        "link": "Contact",
+        "routeLink": "/contact"
+    }
+]

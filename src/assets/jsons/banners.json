@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Tarzan",
+        "description": "Tarzan, having acclimated to life in London, is called back to his former home in the jungle to investigate the activities at a mining encampment.",
+        "image": "images/5.jpg",
+        "views": 5
+    },
+    {
+        "title": "Maximum Ride",
+        "description": "Six children, genetically cross-bred with avian DNA, take flight around the country to discover their origins. Along the way, their mysterious past is ...",
+        "image": "images/2.jpg",
+        "views": 3
+    },
+    {
+        "title": "Independence",
+        "description": "The fate of humanity hangs in the balance as the U.S. President and citizens decide if these aliens are to be trusted ...or feared.",
+        "image": "images/3.jpg",
+        "views": 2
+    },
+    {
+        "title": "Central Intelligence",
+        "description": "Bullied as a teen for being overweight, Bob Stone (Dwayne Johnson) shows up to his high school reunion looking fit and muscular. Claiming to be on a top-secret ...",
+        "image": "images/4.jpg",
+        "views": 7
+    },
+    {
+        "title": "Ice Age",
+        "description": "In the film's epilogue, Scrat keeps struggling to control the alien ship until it crashes on Mars, destroying all life on the planet.",
+        "image": "images/6.jpg",
+        "views": 1
+    },
+    {
+        "title": "X - Man",
+        "description": "In 1977, paranormal investigators Ed (Patrick Wilson) and Lorraine Warren come out of a self-imposed sabbatical to travel to Enfield, a borough in north ...",
+        "image": "images/7.jpg",
+        "views": 4
+    }
+]
